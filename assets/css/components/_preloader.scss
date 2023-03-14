@@ -1,0 +1,35 @@
+#preloader {
+    background-color: $blue;
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+
+    &:before {
+        content: '';
+        background: $red;
+        box-sizing: border-box;
+        display: inline-block;
+        position: absolute;
+        margin: -65px 0 0 -32px;
+        left: 50%;
+        top: 50%;
+        height: 65px;
+        width: 65px;
+        animation: flipX 1s linear infinite;
+    }
+
+    h4 {
+        left: 50%;
+        top: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        margin-top: 60px;
+        letter-spacing: 2px;
+    }
+}

@@ -1,0 +1,11 @@
+.section-heading {
+    background: $blue file_path('images/bg-head.jpg') no-repeat top center fixed; 
+    background-size: cover;
+    padding: 330px 0 0;
+}
+
+.animated-title {
+    .letter {
+        opacity: 0;
+    }
+}

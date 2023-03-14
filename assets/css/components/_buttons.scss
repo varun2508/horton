@@ -1,0 +1,182 @@
+.btn {
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: $font_second_bold;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    line-height: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+
+    &-white {
+        background-color: $white;
+        color: $black;
+
+        &:hover {
+            background-color: $blue;
+            color: $white;
+        }
+
+        &::after {
+            background-color: transparent;
+            border: 2px solid $blue;
+            content: "";
+            position: absolute;
+            left: -2px;
+            height: 100%;
+            top: -2px;
+            opacity: 0;
+            width: 100%;
+            z-index: -1;
+            transform: scaleX(1.1) scaleY(1.3);
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        &:hover::after {
+            opacity: 1;
+            transform: scaleX(1) scaleY(1);
+        }
+    }
+
+    &-transparent {
+        background-color: transparent;
+        border: 2px solid $white;
+        color: $white;
+
+        &:hover {
+            background-color: $red;
+            border-color: $red;
+        }
+
+        &::before,
+        &::after,
+        span::before,
+        span::after {
+            content: '';
+            background-color: $red;
+            position: absolute;
+            transition: all 0.3s ease;
+        }
+
+        &::before,
+        &::after {
+            bottom: -2px;
+            right: -2px;
+        }
+
+        &::before {
+            height: 0%;
+            width: 2px;
+        }
+
+        &::after {
+            height: 2px;
+            width: 0%;
+        }
+
+        span::before,
+        span::after {
+            left: -2px;
+            top: -2px;
+        }
+
+        span::before {
+            height: 0%;
+            width: 2px;
+        }
+
+        span::after {
+            height: 2px;
+            width: 0%;
+        }
+        
+        &:hover {
+            &::before,
+            &::after,
+            span::before,
+            span::after {
+                background-color: $white;
+            }
+
+            &::before {
+                height: 80%;
+            }
+
+            &::after {
+                width: 20%;
+            }
+
+            span::before {
+                height: 80%;
+            }
+
+            span::after {
+                width: 20%;
+            }
+        }
+    }
+
+    &-dark { }
+
+    &-sm {
+        padding: 11px 35px;
+    }
+
+    &-md { }
+
+    &-lg {
+        font-size: 13px;
+        padding: 14px 38px;
+        min-width: 154px;
+    }
+
+    &-w-max {
+        min-width: 212px;
+    }
+}
+
+.btn-play {
+    background-color: $white;
+    border-radius: 50%;
+    border-width: 0;
+    height: 93px;
+    width: 93px;
+    z-index: 1;
+
+    i {
+        margin-left: 6px;
+        vertical-align: middle;
+    }
+}
+
+.btn-arrow {
+    font-size: 13px;
+    width: fit-content;
+
+    i {
+        transition: margin 0.2s ease;
+    }
+
+    &:hover {
+        i {
+            margin-left: 15px;
+        }
+    }
+}
+
+.btn-prev,
+.btn-next {
+    background-color: transparent;
+    border-width: 0;
+}
+
+.link-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    i {
+        margin-top: -2px;
+    }
+}

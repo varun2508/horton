@@ -1,0 +1,4 @@
+
+@function file_path($file) {
+    @return url($files_prefix + $file)
+}

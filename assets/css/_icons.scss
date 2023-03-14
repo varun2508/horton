@@ -1,0 +1,74 @@
+[class^="icon-"],
+[class*=" icon-"] {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.icon-lock {
+    background-image: file_path('images/icons/lock.svg'); 
+    height: 16px;
+    width: 15px;
+}
+
+.icon-play {
+    background-image: file_path('images/icons/play.svg'); 
+    height: 27px;
+    width: 20px;
+}
+
+.icon-arrow-right {
+    background-image: file_path('images/icons/arrow-right.svg');
+    margin-left: 10px;
+    height: 8px;
+    width: 15px;
+}
+
+.icon-next {
+    background-image: file_path('images/icons/chevron-right.svg');
+    height: 25px;
+    width: 13px;
+}
+
+.icon-prev {
+    background-image: file_path('images/icons/chevron-left.svg');
+    height: 25px;
+    width: 13px;
+}
+
+.icon-twitter {
+    background-image: file_path('images/icons/social-twitter.svg'); 
+    height: 23px;
+    width: 23px;
+}
+
+.icon-facebook {
+    background-image: file_path('images/icons/social-facebook.svg'); 
+    height: 23px;
+    width: 23px;
+}
+
+.icon-instagram {
+    background-image: file_path('images/icons/social-instagram.svg'); 
+    height: 23px;
+    width: 23px;
+}
+
+.icon-youtube {
+    background-image: file_path('images/icons/social-youtube.svg'); 
+    height: 16px;
+    width: 21px;
+}
+
+.icon-linkedin {
+    background-image: file_path('images/icons/social-linkedin.svg'); 
+    height: 20px;
+    width: 20px;
+}
+
+.icon-mail {
+    background-image: file_path('images/icons/mail.svg'); 
+    height: 17px;
+    width: 18px;
+}

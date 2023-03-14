@@ -1,0 +1,27 @@
+.row-about {
+    display: flex;
+}
+
+.about-content {
+    position: relative;
+    padding: 235px 0 325px;
+    width: 100%;
+}
+
+.about-text {
+    position: relative;
+    max-width: 412px;
+    z-index: 1;
+}
+
+.about-banner {
+    background: file_path('images/about.jpg') no-repeat;
+    background-position: left center;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 72vw;
+    z-index: 0;
+}

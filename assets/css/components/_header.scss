@@ -1,0 +1,106 @@
+.header {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+
+    &-row {
+        align-items: center;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        
+        &__left {
+            border-right: 1px solid $white;
+            padding: 34px 23px 27px 0;
+        }
+
+        &__right {
+            align-items: center;
+            border-left: 1px solid $white;
+            display: flex;
+            gap: 30px;
+            padding: 28px 0 28px 30px;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            bottom: 0;
+            display: block;
+            height: 1px;
+            background-color: $white;
+            position: absolute;
+            transition: all 1s ease-in-out;
+        }
+
+        &::before {
+            right: 100%;
+            left: 0;
+        }
+
+        &::after {
+            left: 100%;
+            right: 0;
+        }
+
+        &.loaded {
+            &::before {
+                right: 50%;
+            }
+
+            &::after {
+                left: 50%;
+            }
+        }
+    }
+
+    nav {
+        display: flex;
+        gap: 30px;
+        padding: 42px 0 38px;
+
+        a {
+            position: relative;
+
+            &:before,
+            &:after {
+                content: '';
+                background-color: $white;
+                height: 2px;
+                position: absolute;
+                width: 0;
+                transition: width .2s ease-in-out;
+            }
+
+            &:before {
+                right: 0;
+                top: -10px;
+            }
+
+            &:after {
+                left: 0;
+                bottom: -8px;
+            }
+
+            &:hover {
+                &:before,
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    a:not(.btn) {
+        color: $white;
+        font-family: $font_second_bold;
+        font-size: 13px;
+        line-height: 12px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+}
+
